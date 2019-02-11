@@ -1,0 +1,3 @@
+<%
+jagg.initializer("gettingstarted/gettingstarted-view", {});
+%>

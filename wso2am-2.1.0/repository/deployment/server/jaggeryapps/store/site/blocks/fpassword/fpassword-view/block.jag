@@ -1,0 +1,7 @@
+<%
+include("/jagg/jagg.jag");
+jagg.block("fpassword/fpassword-view", {
+initializer:function (data) {},
+getInputs:function () {}
+});
+%>

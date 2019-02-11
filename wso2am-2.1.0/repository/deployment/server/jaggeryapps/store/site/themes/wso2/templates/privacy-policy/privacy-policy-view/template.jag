@@ -1,0 +1,29 @@
+<% jagg.template("privacy-policy/privacy-policy-view", function(inputs, outputs, jagg) { %>
+<div>
+	
+		
+	<div>
+		<h3>Privacy Policy</h3>
+	</div>
+
+	
+
+	<div>
+		<p>Jazz&nbsp;is committed to the privacy of its customers and the visitors to this website. The website utilizes a high degree of encryption on information sent over the Internet and on information stored within its system. The following policies outline other specific protections that Jazz has in place.</p>
+<h4>Option to Receive or Not to Receive Mail</h4>
+<p>Jazz is pleased to be able to bring you extra value by providing you information about our offers and updates regarding our product from time to time. You can subscribe to this information by entering your email address in the provided option on the home page. Your email address will only be utilized to send you updates regarding</p>
+<h4>Jazz Offers</h4>
+<p>By choosing to subscribe to our updates, you grant Jazz permission to contact you with these offers and information.</p>
+<h4>Sharing the Information with Third Parties</h4>
+<p>Jazz will not transfer your information to third parties.</p>
+<h4>Security</h4>
+<p>This website has security measures in place to protect the loss, misuse and alteration of the information under our control.</p>
+<h4>Cancellation</h4>
+<p>At any point if you wish to stop receiving email notifications from us, you can choose the unsubscribe option.</p>
+<p>Jazz is committed to maintaining the highest standards of privacy. We reserve the right to modify these policies at any time.</p>
+	</div>
+
+</div>
+					
+
+<% }); %>

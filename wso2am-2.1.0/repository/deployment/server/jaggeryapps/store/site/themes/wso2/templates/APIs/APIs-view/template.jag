@@ -1,0 +1,194 @@
+<% jagg.template("APIs/APIs-view", function(inputs, outputs, jagg) { %>
+
+					
+<style type="text/css">
+.body-wrapper {
+    padding: 0px 0px 40px 0px;
+}
+</style>
+					
+
+<div class="row">
+<div class="banner">
+<a><img src="\store\site\themes\wso2\libs\theme-wso2_1.0\images\home-header.png" alt="" class="img-responsive" onclick="scroll_down();" >  </a>
+</div>
+</div>
+
+
+<div class="row">
+<ul class="help-links top30">
+
+
+		<li>
+
+			<a href="/store/site/pages/login.jag" class="help-link">
+
+			<div class="icon-circle">
+
+			<img src="\store\site\themes\wso2\images\1_1.png"></div>
+
+			Account APIs
+
+			</a>
+
+		</li>
+
+		<li>
+
+			<a href="/store/site/pages/login.jag" class="help-link">
+
+			<div class="icon-circle">
+
+			<img src="\store\site\themes\wso2\images\3_1.png""></div>
+
+			Transactions API
+
+			</a>
+
+		</li>
+
+		<li>
+
+			<a href="/store/site/pages/login.jag" class="help-link">
+
+			<div class="icon-circle">
+
+			<img src="\store\site\themes\wso2\images\2_1.png""></div>
+
+			Authentication OAuth API
+
+			</a>
+
+		</li>
+
+		<li>
+
+			<a href="/store/site/pages/login.jag" class="help-link">
+
+			<div class="icon-circle">
+
+			<img src="\store\site\themes\wso2\images\4_1.png""></div>
+
+			Utilities
+
+			</a>
+
+		</li>
+
+	</ul>
+
+</div>
+
+
+<!--
+<div class="ttr_Home_html_row1 row" style="text-align: center;">
+
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<a href="\store\site\pages\login.jag" target="_self">
+<div class="ttr_Home_html_column10">
+
+<div class="html_content">
+<p style="line-height:1.76056338028169;"><img src="\store\site\themes\wso2\images\accounts-apis.png"></p>
+
+<p>Account APIs</p>
+</div>
+
+</div>
+</a>
+</div>
+
+
+<div class="clearfix visible-xs-block"></div>
+
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<a href="\store\site\pages\login.jag" target="_self">
+<div class="ttr_Home_html_column10">
+
+<div class="html_content">
+<p style="line-height:1.76056338028169;"><img src="\store\site\themes\wso2\images\money-transfer.png"></p>
+
+<p>Transactions API</p>
+</div>
+
+</div>
+</a>
+</div>
+
+
+<div class="clearfix visible-xs-block"></div>
+
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<a href="\store\site\pages\login.jag" target="_self">
+<div class="ttr_Home_html_column10">
+
+<div class="html_content">
+<p style="line-height:1.76056338028169;"><img src="\store\site\themes\wso2\images\o-auth.png"></p>
+
+<p>Authentication OAuth API</p>
+</div>
+
+</div>
+</a>
+</div>
+
+
+<div class="clearfix visible-xs-block"></div>
+
+
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<a href="\store\site\pages\login.jag" target="_self">
+<div class="ttr_Home_html_column10">
+
+<div class="html_content">
+<p style="line-height:1.76056338028169;"><img src="\store\site\themes\wso2\images\utilities.png"></p>
+
+<p>Utilities</p>
+</div>
+
+</div>
+</a>
+</div>
+
+
+<div class="clearfix visible-xs-block"></div>
+
+
+
+</div>
+</div>
+
+
+
+</div>  -->
+
+
+<script>
+
+$(window).on('beforeunload', function(){
+    $(window).scrollTop(0);
+});
+
+function scroll_down(){
+$('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
+
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+<% }); %>

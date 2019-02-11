@@ -1,0 +1,150 @@
+<% jagg.template("user/login", function(inputs, outputs, jagg) { %>
+<style>
+
+.fw-lg{
+font-size:16px;
+}
+</style>
+
+
+<header>
+        <div class="navbar navbar-default navbar-static-top navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/store/site/pages/APIs.jag" class="navbar-brand"> 
+					<img style="width: 125px; margin-top: 12px;"  src="\store\site\themes\wso2\images\jazz-logo.png" class="logo" alt="APIStore Home"></a>
+                </div>
+                <div class="navbar-collapse collapse" style="">
+
+					<ul class="nav navbar-nav" style="float:left;    margin-left: 20px;">
+
+							<li class="visible-inline-block">
+				
+	                <a title="APIs" id="register-link1" href="/store/site/pages/APIs.jag" class="link-myapplications">
+	                 	<div class="nav-app">
+					 <span class="icon fw-lg">
+					  
+	                 <i class="fw my"><strong>&nbsp;&nbsp;&nbsp;APIs&nbsp;&nbsp;&nbsp;</strong></i>
+					 </span></div>
+	                  
+	                    <span class="hidden-xs"></span>
+	                </a>
+								
+	            </li>
+				
+				
+				
+					<li class="visible-inline-block">
+	                <a title="Fourms" id="register-link1" href="/store/site/pages/gettingstarted.jag" "="">
+	                  <span class="icon fw-lg">
+	                 <i class="fw my"><strong>Getting&nbsp;Started</strong></i>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+	            </li>
+						
+						
+							            
+					<li class="visible-inline-block">
+	                <a title="About Us" id="register-link1" href="/store/site/pages/about.jag">
+	                  <span class="icon fw-lg">
+	                 <i class="fw my"><strong>About&nbsp;us</strong></i>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+	            </li>
+						
+							            
+				 
+					</ul>
+									
+									
+									
+                </div>
+                
+            </div>
+        </div>
+</header>
+
+
+
+
+
+<div class="page-content-wrapper">
+    <div class="container-fluid ">
+        <div class="container">
+            <div class="login-form-wrapper">
+                <div class="row">
+                   
+
+
+				 <!--   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="brand-container add-margin-bottom-5x">
+                           <div class="row">
+                                <div class="col-xs-6 col-sm-3 col-md-9 col-lg-9 center-block float-remove-sm float-remove-xs pull-right-md pull-right-lg">
+                                   <img class="img-responsive brand-spacer" alt="store_logo" src="\store\site\themes\wso2\images\jazz_1.jpg">  
+                                </div> 
+                            </div>
+                            <h2 class="text-center-sm text-center-xs text-center-md text-right"><%=i18n.localize("API Store")%></h2> 
+                        </div>
+                    </div>   -->
+					
+					
+					
+					
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 login">
+                        <div class="data-container">
+                            <form class="form-horizontal" id="mainLoginForm" autocomplete="off">
+                                <h3><strong><%=i18n.localize("Sign in to your account")%></strong></h3>
+                                <div class="alert alert-danger" role="alert" id="loginErrorMsg" style="display:none">
+				                    
+				                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                        <div class="input-group input-wrap">
+                                            <input type="text" id="username" name="name" title="<%=i18n.localize("Username")%>" class="form-control" placeholder="<%=i18n.localize("Username")%>"  />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                        <div class="input-group input-wrap">
+                                            <input type="password"  autocomplete="off" id="password" name="pass" title="<%=i18n.localize("Password")%>" class="form-control" placeholder="<%=i18n.localize("Password")%>">
+                                        </div>
+                                    </div>
+                                </div>
+
+								
+								<div id='html_element' style="display:none"></div>
+				<div class="g-recaptcha " data-sitekey="6LeemC0UAAAAAFO6jtJJNasiRxgzJNp-FG6ALVwa" data-callback="correctCaptcha"></div>
+
+
+								<br>
+                                <input type="hidden" id="tenant" name="tenant" value="<%=request_tenant%>">
+                                <div class="form-group">
+                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                        <button type="button" id="loginBtn" onclick="login();" class="btn btn-default btn-primary add-margin-right-2x"><%=i18n.localize("Sign In")%></button>
+                                        <button type="button" id="goBackBtn" class="btn btn-default btn-secondary hidden-xs hidden-sm"><%=i18n.localize("Go Back")%></button>
+                                    </div>
+                                </div>
+								
+
+								</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<%}); %>

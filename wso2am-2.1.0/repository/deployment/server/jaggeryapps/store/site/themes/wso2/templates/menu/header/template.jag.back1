@@ -1,0 +1,509 @@
+<% jagg.template("menu/header", function(inputs, outputs, jagg) { %>
+<% 
+var user = outputs.user; 
+var i18n = require("i18n");var publisherUrl;
+var localeResourcesBasePath="/site/conf/locales/jaggery/";
+i18n.init(request,localeResourcesBasePath);
+
+var mod = jagg.module("manager");
+var isSelfSignupEnabled = mod.isSelfSignupEnabledForTenantUser(request_tenant);
+var tenantDomains = mod.getActiveTenantDomains().tenantDomains;
+
+var currentURL = request.getRequestURI();
+if(request.getQueryString()){
+    currentURL += "?" + request.getQueryString();
+}
+
+var isSuperTenant, tenantDomain;
+var tenant = request_tenant;
+if (jagg.getUser() != null) {
+	isSuperTenant = jagg.getUser().isSuperTenant;
+var MultitenantUtils = Packages.org.wso2.carbon.utils.multitenancy.MultitenantUtils;
+	tenantDomain = MultitenantUtils.getTenantDomain(jagg.getUser().username);
+}
+
+print("User-Agent : " + request.getHeader("User-Agent"));
+
+%>
+
+ 
+ 
+ 
+ 
+<script>
+function msieversion() 
+{
+    var ua = window.navigator.userAgent;
+	
+    var msie = ua.indexOf("Trident");
+
+    if (msie > 0) // If Internet Explorer, return version number
+    {
+	
+        alert('brower found'); </script>
+		<script>
+		
+		
+		</script>
+    }
+    else  // If another browser, return 0
+    {
+        alert('otherbrowser');
+    }
+
+    return false;
+}
+msieversion() ;
+</script>
+ 
+ 
+ 
+<style type="text/css">
+.fw-lg{
+font-size:16px;
+}
+
+header .navbar {
+    min-height: 100px;
+}
+
+header .navbar-default {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header .navbar {
+    margin-bottom: 0;
+}
+
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+@media (max-width: 767px) {
+.navbar-nav {
+    border-top: none;
+    padding-top: 30px;
+    float: none;
+    width: 100%;
+}
+.navbar-collapse.collapse {
+    border: none;
+    overflow: hidden;
+}
+header .navbar-nav > li {
+    padding-bottom: 0;
+    padding-top: 0;
+	width:100%;
+}
+}
+
+</style>
+
+					
+				
+				<%if (site.showThemesMenu) { %>
+				<ul>
+						<!-- Themes Menu -->
+						<li class="visible-inline-block">       		
+					         <a title="theme" href="#" class="dropdown" data-toggle="dropdown">
+					            <span class="icon fw-stack fw-lg">
+					               <i class="fw fw-circle-outline fw-stack-2x"></i>
+					               <i class="fw fw-pages fw-stack-1x"></i>
+					            </span>
+					            <span class="hidden-xs"> &nbsp; <%=i18n.localize("Themes")%><span class="caret"></span></span>
+					         </a>
+					         <ul class="dropdown-menu dropdown-menu-right float-remove-xs position-static-xs text-center-xs remove-margin-xs slideInDown" role="menu">
+					           <li>
+					           <form id="themeSelectForm" action="<%=jagg.getAbsoluteUrl(jagg.getThemeFile("templates/user/theme/template.jag?theme=modern"))%>">
+                        <input type="hidden" id="themeToApply" name="themeToApply" />
+                        <input type="hidden" id="subthemeToApply" name="subthemeToApply" />
+                        <input type="hidden" id="pathToSend" name="pathToSend" value="<%= encode.forHtmlAttribute(currentURL)%>" />
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <div class="thumbnail <% if(jagg.getUserTheme().base == "wso2" && jagg.getUserTheme().subtheme == null) { %>currentTheme<% } %>">
+                                        <a data-theme="wso2" title="WSO2 theme" data-subtheme="" class="badge themeLabel" onclick="applyTheme(this)">
+                                            <img alt="WSO2 thumb" src="<%=jagg.getAbsoluteUrl(jagg.getThemeFile("images/thumb-wso2.png"))%>" />
+                                            <br /><div class="themeName">WSO2</div>
+                                        </a>
+                                    </div>
+
+                                </td>                                
+                              </tr>
+                              <tr>
+                                <td>
+                                    <div class="thumbnail <% if(jagg.getUserTheme().base == "dark" && jagg.getUserTheme().subtheme == null) { %>currentTheme<% } %>">
+                                        <a data-theme="wso2" data-subtheme="dark" title="dark theme" class="badge themeLabel" onclick="applyTheme(this)">
+                                            <img alt="dark thumb" src="<%=jagg.getAbsoluteUrl(jagg.getThemeFile("images/thumb-dark.png"))%>" />
+                                            <br /><div class="themeName"><%=i18n.localize("Dark")%></div>
+                                        </a>
+                                    </div>
+                                </td>                            
+                            </tr>
+                        </table>
+                    </form>
+					           
+					           </li>
+					         </ul>
+				      </li>
+						<!-- End Themes Menu -->
+						</ul>
+						<%} %>
+						   
+				
+	   
+	   
+       <% if(user){ %>
+	   
+<header>
+
+        <div class="navbar navbar-default navbar-static-top navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/store/site/pages/list-apis.jag" class="navbar-brand" > <img src="\store\site\themes\wso2\images\jazz-logo.jpg"%>" class="logo" alt="<%=i18n.localize("APIStore Home")%>"/></a>
+                </div>
+                <div class="navbar-collapse collapse" style="">
+
+									<ul class="nav navbar-nav" style="float:left;    margin-left: 20px;">
+
+									 <li class="visible-inline-block">
+				
+	                <a title="My APIs" id="register-link1" href="/store/site/pages/list-apis.jag" class="link-myapplications">
+	                 	<div class="nav-app">
+					 <span class="icon fw-lg">
+					  
+	                 <i class="fw my">My&nbsp;APIs</i>
+					 </div>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+								
+	            </li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<li class="visible-inline-block">
+				
+	                <a title="My Apps" id="register-link1" href="/store/site/pages/applications.jag" class="link-myapplications">
+	                 	<div class="nav-app">
+					 <span class="icon fw-lg">
+					  
+	                 <i class="fw my">My Apps</i>
+					 </div>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+								
+	            </li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					<li class="visible-inline-block">
+	                <a title="Getting&nbsp;Started" id="register-link1" href=" <%=jagg.getAbsoluteUrl("/site/pages/gettingstarted.jag")%>">
+	                  <span class="icon fw-lg" >
+	                 <i class="fw my">Getting&nbsp;Started</i>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+	            </li>
+						
+						
+							            </li>
+					<li class="visible-inline-block">
+	                <a title="About Us" id="register-link1" href="<%=jagg.getAbsoluteUrl("/site/pages/about.jag")%>">
+	                  <span class="icon fw-lg" >
+	                 <i class="fw my">About&nbsp;us</i>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+	            </li>
+						
+							            </li>
+					<li class="visible-inline-block">
+	                <a title="Contact Us" id="register-link1" href="<%=jagg.getAbsoluteUrl("/site/pages/contactus.jag")%>">
+	                  <span class="icon fw-lg" >
+	                 <i class="fw my">Contact&nbsp;us</i> 
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+	            </li>
+									</ul>
+									
+									
+									
+					<ul class="nav navbar-nav" style="float:right;">
+                      <li class="visible-inline-block">
+	                <a title="My Account" id="register-link1" href="<%= jagg.urlTenanted('/site/pages/user-info.jag')%>">
+	                  <span class="icon fw-stack fw-lg">
+	                  <i class="fw fw-circle-outline fw-stack-2x"></i>
+	                  <i class="fw fw-register fw-stack-1x"></i>
+					  </span>
+	                    <span class="">
+						<%=i18n.localize("My Account")%>
+	                </a>
+					</span>
+	                </li>
+
+					
+					
+					
+				       <li  class="visible-inline-block" id="logout-link">       		
+					         <a title=<%=i18n.localize("Sign Out")%> href="#">
+					            <span class="icon fw-stack fw-lg">
+					               <i class="fw fw-circle-outline fw-stack-2x"></i>
+					               <i class="fw fw-user fw-stack-1x"></i>
+					            </span>			
+								<span class="" >
+								
+								<%=i18n.localize("Sign Out")%>			
+								</a> 
+								</span>
+						
+								
+					           </li>
+                    </ul>
+                </div>
+                <div id="signin" style="float: right;display: none;text-decoration: underline;color: red;margin-top: -35px;"><strong>Please Sign in or Sign up</strong></div>
+            </div>
+        </div>
+	</header>
+							   
+							   
+							   
+							
+							   
+							 
+						   
+							  
+							   
+							
+							
+							
+								
+								
+								
+								
+	  
+      
+<% } else { %>
+
+
+
+
+
+<header>
+
+        <div class="navbar navbar-default navbar-static-top navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href= "/store/site/pages/APIs.jag" class="navbar-brand"> <img src="\store\site\themes\wso2\images\jazz-logo.jpg"%>" class="logo" alt="<%=i18n.localize("APIStore Home")%>"/></a>
+                </div>
+                <div class="navbar-collapse collapse" style="">
+
+					<ul class="nav navbar-nav" style="float:left;    margin-left: 20px;">
+
+							<li class="visible-inline-block">
+				
+	                <a title="APIs" id="register-link1" href="/store/site/pages/APIs.jag" class="link-myapplications">
+	                 	<div class="nav-app">
+					 <span class="icon fw-lg">
+					  
+	                 <i class="fw my">APIs</i>
+					 </div>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+								
+	            </li>
+				
+				
+				
+					<li class="visible-inline-block">
+	                <a title="Fourms" id="register-link1" href="<%=jagg.getAbsoluteUrl("/site/pages/gettingstarted.jag")%>"">
+	                  <span class="icon fw-lg" >
+	                 <i class="fw my">Getting&nbsp;Started</i>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+	            </li>
+						
+						
+							            </li>
+					<li class="visible-inline-block">
+	                <a title="About Us" id="register-link1" href="<%=jagg.getAbsoluteUrl("/site/pages/about.jag")%>">
+	                  <span class="icon fw-lg" >
+	                 <i class="fw my">About&nbsp;us</i>
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+	            </li>
+						
+							            </li>
+					<li class="visible-inline-block">
+	                <a title="Contact Us" id="register-link1" href="<%=jagg.getAbsoluteUrl("/site/pages/contactus.jag")%>">
+	                  <span class="icon fw-lg" >
+	                 <i class="fw my">Contact&nbsp;us</i> 
+	                  </span>
+	                    <span class="hidden-xs"></span>
+	                </a>
+	            </li>		 
+					</ul>
+									
+									
+									
+					<ul class="nav navbar-nav" style="float:right;">
+                      <%if (tenant == null && isSuperTenant != null && !isSuperTenant && site.showPublicStoreURL) {%>
+						<li class="visible-inline-block">
+			                <a title="<%=i18n.localize("s API Store")%>" id="register-link" href="<%=jagg.getAbsoluteUrl("/")%><%="?tenant=" + tenantDomain%>">
+			                  <span class="icon fw-stack fw-lg">
+			                  <i class="fw fw-circle-outline fw-stack-2x"></i>
+			                  <i class="fw fw-store fw-stack-1x"></i>
+			                
+			                    <span class="hidden-xs"> <%=i18n.localize("Go to")%> <%=tenantDomain%><%=i18n.localize("s API Store")%></span>
+			                </a>
+			            </li>
+				<%} else if ((tenant != null) && site.showPublicStoreURL){%>
+						<li class="visible-inline-block">
+			                <a title="<%=i18n.localize("Go to")%> <%=i18n.localize("Public API Store")%>" id="register-link" href="<%=jagg.getAbsoluteUrl("/")%>">
+			                  <span class="icon fw-stack fw-lg">
+			                  <i class="fw fw-circle-outline fw-stack-2x"></i>
+			                  <i class="fw fw-store fw-stack-1x"></i>
+			                  </span>
+			                    <span class="hidden-xs"> <%=i18n.localize("Go to")%> <%=i18n.localize("Public API Store")%></span>
+			                </a>
+			            </li>
+				<%}%>
+				
+			<%if(isSelfSignupEnabled){%>
+	            <li class="visible-inline-block">
+	                <a title="<%=i18n.localize("Sign-up")%>" id="register-link1" href="<%= jagg.urlTenanted('/site/pages/sign-up.jag')%>">
+	                  <span class="icon fw-stack fw-lg">
+	                  <i class="fw fw-circle-outline fw-stack-2x"></i>
+	                  <i class="fw fw-register fw-stack-1x"></i>
+	                  </span>
+	                    <span class=""> <%=i18n.localize("Sign-up")%></span>
+	                </a>
+	            </li>
+	          <% } %>       
+			  
+	            <li class="visible-inline-block">
+	                <a class="need-login" href="<%= jagg.urlTenanted('/')%>">
+	                  <span class="icon fw-stack fw-lg">
+	                  <i class="fw fw-circle-outline fw-stack-2x"></i>
+	                  <i class="fw fw-sign-in fw-stack-1x"></i>
+	                  </span>
+	                    <span class=""><%=i18n.localize("Sign In")%></span>
+	                </a>
+	            </li>
+                    </ul>
+                </div>
+                <div id="signin" style="float: right;display: none;text-decoration: underline;color: red;margin-top: -35px;"><strong>Please Sign in or Sign up</strong></div>
+            </div>
+        </div>
+	</header>
+
+
+
+   
+
+
+
+
+  
+		</span>
+<% } %>
+
+<!-- TODO: Check and include relevant -->
+<% /*
+        var isSuperTenant, tenantDomain;
+        var httpsUrl= mod.getHTTPsURL();
+		
+		var tenantDomains = mod.getActiveTenantDomains().tenantDomains;
+    var log = new Log();
+
+        var currentURL = request.getRequestURI();
+        if(request.getQueryString()){
+            currentURL += "?" + request.getQueryString();
+        }
+        var tenant=request_tenant;
+        var urlPrefix = jagg.getTenantURLPrefix();
+        
+        if (jagg.getUser() != null) {
+        	isSuperTenant = jagg.getUser().isSuperTenant;
+		var MultitenantUtils = Packages.org.wso2.carbon.utils.multitenancy.MultitenantUtils;
+    		tenantDomain = MultitenantUtils.getTenantDomain(jagg.getUser().username);
+        }
+        
+
+
+%>
+
+<ul class="nav navbar-nav navbar-right">
+<%if ((jagg.getTenantDomain() != null)&& site.showPublicStoreURL){%>
+<li class="dropdown">
+  <a title="<%=i18n.localize("Public API Store")%>" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-external-link"></i> <%=i18n.localize("Go to")%> <span class="caret"></span></a>
+  <ul class="dropdown-menu" role="menu">
+    <li><a title="<%=i18n.localize("Public API Store")%>" href="<%=jagg.getAbsoluteUrl("/")%>"><i class="fa fa-globe"></i> <%=i18n.localize("Public API Store")%></a></li>
+  </ul>
+</li>      
+<%}%>
+
+
+<%if(jagg.getUser().hasPublisherAccess){%>
+<%publisherUrl = jagg.module("manager").getAPIPublisherURL().url;
+<%}%>
+
+
+</ul>
+<% /*%>
+<!--Links to Access Tenant Store and Public Store-->
+<div class="tenant-position-setter">
+<%if(jagg.getUser()!=null){%>
+	<!--Links to Access Tenant Store and Public Store-->
+		<%if (jagg.getUser().hasPublisherAccess) {%>
+			<%=i18n.localize("Go to")%> <a title="<%=i18n.localize("API Publisher")%>" href="<%=publisherUrl%>" target="_blank" ><%=i18n.localize("API Publisher")%></a>
+           <%if(site.showPublicStoreURL){%>
+           |
+
+		<%}}%>
+	<%}%>
+
+		<%if (tenant == null && isSuperTenant != null && !isSuperTenant && site.showPublicStoreURL) {%>
+				<%=i18n.localize("Go to ")%><a title="<%=i18n.localize("'s API Store")%>" href="<%=jagg.getAbsoluteUrl("/")%><%="?tenant=" + tenantDomain%>"><%=tenantDomain%><%=i18n.localize("'s API Store")%></a>
+		<%} else if ((tenant != null)&& site.showPublicStoreURL){%>
+			  <%=i18n.localize("Go to ")%><a title="<%=i18n.localize("Public API Store")%>" href="<%=jagg.getAbsoluteUrl("/")%>"><%=i18n.localize("Public API Store")%></a>
+		<%}%>
+
+
+	</div>
+<% */%>
+<!--  -->
+
+<% }); %>

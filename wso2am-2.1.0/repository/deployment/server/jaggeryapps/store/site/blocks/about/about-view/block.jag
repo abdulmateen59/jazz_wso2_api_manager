@@ -1,0 +1,7 @@
+<%
+include("/jagg/jagg.jag");
+jagg.block("about/about-view", {
+initializer:function (data) {},
+getInputs:function () {}
+});
+%>

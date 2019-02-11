@@ -1,0 +1,25 @@
+<% jagg.template("about/about-view", function(inputs, outputs, jagg) { %>
+
+<div class="row">
+					
+<div class="col-lg-6 col-xs-12"> 
+<img src="\store\site\themes\wso2\images\About-Us.jpg" style="border:5px solid #EBEBEB;">
+</div>
+
+
+<div class="col-lg-6 col-xs-12">
+<p>Jazz is Pakistan’s leading telecom service provider, spearheading service excellence and product innovation in the country. With a subscriber base above 50 million and a legacy of more than 20 years, Jazz maintains market leadership through cutting-edge, integrated technology, the strongest brands and the largest portfolio of value added services in the industry.</p>
+
+<p>Housing a nation-wide network of contact centers and an unparalleled fibre optic backbone of more than 10,000 kilometers, Jazz has already invested billions of dollars in the country to date. It also provides uninterrupted countrywide connectivity, unmatched customer services and international roaming in over 150 countries.</p>
+
+<p>As a responsible entity, the company passionately supports education, health and environmental initiatives and promotes sustainable business practices.</p>
+
+<p>Jazz offers exclusive & personalized tariff plans that empower customers and cater to the communication needs of a diverse group of people, from individuals to businessmen to corporate and multinationals.</p>
+
+<p>Through its innovative services and products, Jazz is set to bring about a digital revolution that will enable and transform societies towards a more progressive Pakistan.</p>
+</div>
+
+
+</div>
+
+<% }); %>

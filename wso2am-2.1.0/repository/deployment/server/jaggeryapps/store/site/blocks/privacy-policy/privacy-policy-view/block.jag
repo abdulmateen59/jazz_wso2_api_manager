@@ -1,0 +1,7 @@
+<%
+include("/jagg/jagg.jag");
+jagg.block("privacy-policy/privacy-policy-view", {
+initializer:function (data) {},
+getInputs:function () {}
+});
+%>

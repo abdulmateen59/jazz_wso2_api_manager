@@ -1,0 +1,5 @@
+<% jagg.template("terms&cond/terms&cond-view", function(inputs, outputs, jagg) { %>
+
+
+
+<% }); %>

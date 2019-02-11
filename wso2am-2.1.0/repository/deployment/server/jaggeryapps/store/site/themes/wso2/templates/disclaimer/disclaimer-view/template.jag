@@ -1,0 +1,27 @@
+<% jagg.template("disclaimer/disclaimer-view", function(inputs, outputs, jagg) { %>
+
+<div>
+	
+		
+	<div >
+		<h3>Disclaimer</h3>
+	</div>
+
+	
+
+	<div>
+		<ol>
+<li>By accessing or using this website you agree to be bound by the following terms and conditions, which may accordingly be enforced by Pakistan Mobile Communications Limited (“PMCL”) against you.You understand and acknowledge that all service marks, trademarks and trade names used by Jazz (collectively, the “Marks”), including but not limited to Jazz, Jazz CONNECT, Jazz&nbsp;CLUB 300, Jazz, &nbsp;Jazz POWER TOOLS, ASK STAR, etc., are the exclusive property of Jazz, and you shall not use any of the Marks without Jazz’s specific prior written approval.</li>
+<li>The content of this website is produced by Jazz, or under instructions from Jazz. All copyrights in respect of the content vest in Jazz. You may not therefore copy or reproduce the same without Jazz written permission.</li>
+<li>Jazz does not represent or warrant that the content of this Website is error free or fit/suitable for any particular purpose. Jazz accordingly shall not be liable to any person who may rely on any such content and/or who may suffer any kind of loss in this behalf. Jazz shall also not be liable in respect of any other material which may be accessed through this website.</li>
+<li>Certain information or services mentioned herein may not be accessible to you if your PC does not support the relevant technology.</li>
+<li>Any information submitted by you (including any personal information) may be used and/or published by Jazz in its entire discretion, in any form whatsoever –including to track your usage of the website and to send messages/information. You undertake that such information shall be accurate, and you take responsibility for any loss, harm, damage, expense, cost etc. that Jazz may suffer in case such information is inaccurate.</li>
+<li>If Jazz suffers loss in respect of any transaction requested by you through this website (including but not limited to credit card transaction(s)) Jazz shall have the right to appropriate indemnification from yourself and you undertake to indemnify and hold Jazz harmless in respect of such loss.</li>
+<li>Any person causing nuisance, inconvenience, defamation or other legal wrong by using this website shall be liable to Jazz and to its customers (as the case may be) –however in no event shall Jazz be liable in respect of such nuisance, inconvenience, defamation or other legal wrong.</li>
+<li>Jazz shall not be liable for any loss, harm, damage, cost, expense etc. (whether direct or indirect) which may be incurred by any person on account of (i) anything contained in or accessible through this website or (ii) in respect of credit card transaction(s) on the net or (iii) SMS chat (iv) any other services provided by Jazz.</li>
+<li>Jazz reserves the right to discontinue or suspend this website at any time without notice, as also to amend these terms and conditions in like manner.</li>
+</ol>
+	</div>
+
+</div>
+<% }); %>

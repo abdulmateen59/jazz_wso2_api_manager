@@ -1,0 +1,161 @@
+<% jagg.template("gettingstarted/gettingstarted-view", function(inputs, outputs, jagg) { %>
+
+<style type="text/css">
+hr {
+    clear: both;
+    padding: 20px 0px;
+    border-bottom: 1px solid #ddd;
+	border-top:0px;
+}
+</style>
+
+<div class="row">
+			<div class="col-lg-12">
+				<div class="col-lg-4">
+				<h4 class="heading">Step 1: Sign Up</h4>
+
+				<ol>
+					<li>Sign Up to get registered with Jazz.</li>
+					<li>Fill the registration details and press sign-up button.</li>
+					<li>You will get an email. Click the link provided.</li>
+
+
+				</ol>
+
+</div>
+<div class="col-lg-8">
+<img src="\store\site\themes\wso2\images\Step1 Sign Up.PNG" alt="" class="img-responsive">
+</div>
+			</div>
+<hr>
+			<div class="col-lg-12 getting_started_margin">
+				<div class="col-lg-4">
+				<h4 class="heading">Step 2: Sign In</h4>
+
+				<ol>
+					<li>Sign In to login.</li>
+					<li>Fill the login details and press sign-in button.</li>
+
+				</ol>
+
+</div>
+<div class="col-lg-8">
+<img src="\store\site\themes\wso2\images\Step2- Sign in.PNG" alt="" class="img-responsive">
+</div>
+			</div>
+<hr>
+			<div class="col-lg-12 getting_started_margin">
+				<div class="col-lg-4">
+				<h4 class="heading">Step 3: Generate Keys</h4>
+
+				<ol>
+					<li>Click on Applications. </li>
+					<li>Use the default app or create a new one.</li>
+					<li>Scroll down to Production Keys and click on generate keys.</li>
+
+
+				</ol>
+
+</div>
+<div class="col-lg-8">
+<img src="\store\site\themes\wso2\images\STEP3 A.PNG" alt="" class="img-responsive">
+
+<img src="\store\site\themes\wso2\images\Step3 B.PNG" alt="" class="img-responsive getting_started_margin">
+</div>
+			</div>
+<hr>
+			<div class="col-lg-12 getting_started_margin">
+				<div class="col-lg-4">
+				<h4 class="heading">Step 4: Subscribe to an App and API</h4>
+
+				<ol>
+					<li>Please Click on APIs link.</li>
+					<li>Please Go into Account APIs.</li>
+					<li>Please select application or create new application using drop down menu.</li>
+					<li>Once application is created, Subscribe the API for this application.</li>
+
+				</ol>
+
+</div>
+<div class="col-lg-8">
+<img src="\store\site\themes\wso2\images\Step4 A.PNG" alt="" class="img-responsive">
+<img src="\store\site\themes\wso2\images\Step4 B.PNG" alt="" class="img-responsive getting_started_margin">
+</div>
+			</div>
+<hr>
+
+			<div class="col-lg-12 getting_started_margin">
+				<div class="col-lg-4">
+				<h4 class="heading">Step 5: Select API and Console</h4>
+
+				<ol>
+					<li>Click on APIs and Account APIs </li>
+					<li>Select API Console tab.</li>
+
+				</ol>
+
+</div>
+<div class="col-lg-8">
+<img src="\store\site\themes\wso2\images\Step5 A.PNG" alt="" class="img-responsive">
+<img src="\store\site\themes\wso2\images\Step5 B.PNG" alt="" class="img-responsive getting_started_margin">
+</div>
+			</div>
+<hr>
+
+			<div class="col-lg-12 getting_started_margin">
+				<div class="col-lg-4">
+				<h4 class="heading">Step 6: Populate input Fields and press try out button
+</h4>
+
+				<ol>
+					<li>Click on the desired API link to view the input details.</li>
+					<li>Please Populate the input fields of the selected API.</li>
+					<li>Click the ‘Try it out!’ button in order to submit the request and view the result response.</li>
+
+
+				</ol>
+
+</div>
+<div class="col-lg-8">
+<img src="\store\site\themes\wso2\images\Step6 A.PNG" alt="" class="img-responsive">
+
+<img src="\store\site\themes\wso2\images\Step6 B.PNG" alt="" class="img-responsive getting_started_margin">
+
+
+</div>
+			</div>
+		
+		
+		<hr>
+		
+		<div class="col-lg-12 getting_started_margin">
+				<div class="col-lg-4">
+				<h4 class="heading">Step 7: JazzCash mobile account registeration</h4>
+
+				<ol>
+					<li>For consuming Accounts and Transactions APIs, MFS registration is required.</li>
+					<li>In order to consume these available API, Please complete Jazz Cash Registration process first.</li>
+					<li>For JAZZ MFS mobile account registration, please visit Jazz Cash services centers.</li>
+					<li>Jazz Support team is available on site for hackathon event.</li>
+
+				</ol>
+
+               </div>
+               <div class="col-lg-8">
+              <img src="\store\site\themes\wso2\images\step7.PNG" alt="" class="img-responsive">
+              <br> <br>	
+              </div>
+
+            <div style="color:red;">NOTE: For Hackathon event, Jazz team members will be available for developers for MFS retailer registration purpose.</div>
+
+<br> <br>
+			</div>
+			
+			</div>
+<br> <br>		
+		
+
+
+
+
+<% }); %>

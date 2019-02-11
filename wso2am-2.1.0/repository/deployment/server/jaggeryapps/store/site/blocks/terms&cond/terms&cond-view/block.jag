@@ -1,0 +1,7 @@
+<%
+include("/jagg/jagg.jag");
+jagg.block("terms&cond/terms&cond-view", {
+initializer:function (data) {},
+getInputs:function () {}
+});
+%>

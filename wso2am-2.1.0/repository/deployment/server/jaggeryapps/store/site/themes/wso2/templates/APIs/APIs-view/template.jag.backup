@@ -1,0 +1,117 @@
+<% jagg.template("APIs/APIs-view", function(inputs, outputs, jagg) { %>
+
+					
+
+<style type="text/css">
+.banner {
+
+}
+</style>
+
+<div class="banner">
+<img src="\store\site\themes\wso2\libs\theme-wso2_1.0\images\jazz-sample-banner1.jpg" alt="" class="img-responsive">
+</div>
+
+
+
+
+
+
+
+<div style="float: center;">
+
+<div class="ttr_Home_html_row1 row" style="text-align: center;">
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<div class="ttr_Home_html_column10">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div class="html_content"><p><br style="font-family:'Roboto Slab','Arial';font-size:1.429em;color:rgba(231,76,60,1);"></p>
+<p><span style="font-family:'Roboto Slab','Arial';font-size:1.429em;color:rgba(231,76,60,1);"><a href="\store\site\pages\login.jag" target="_self" class=""  return false;">Account APIs</a></span></p>
+<p style="line-height:1.76056338028169;"><span style="color:rgba(78,78,78,1);"><a href="\store\site\pages\login.jag" target="_self" class="" onclick="pageView.showSignIn(); return false;"><img src="\store\site\themes\wso2\images\accounts-apis.png"></a></span></p>
+
+<p style="height: 80px;"><span style="color:rgba(78,78,78,1);">Account APIs, a set of mobile wallet status, wallet balance inquiry and utility bill payments</span></p>
+<p style="line-height:1.76056338028169;"><span><a href="\store\site\pages\login.jag" target="_self" class="btn btn-md btn-default" onclick="pageView.showSignIn(); return false;">Learn more &gt;</a></span></p></div>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div style="clear:both;"></div>
+
+</div>
+</div>
+<div class="clearfix visible-xs-block"></div>
+
+
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<div class="ttr_Home_html_column11">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div class="html_content">
+<p><br style="font-family:'Roboto Slab','Arial';font-size:1.429em;color:rgba(231,76,60,1);"></p>
+<p><span style="font-family:'Roboto Slab','Arial';font-size:1.429em;color:rgba(231,76,60,1);"><a href="\store\site\pages\login.jag" target="_self" class="" return false;">Transactions API</a> </span></p>
+<p style="line-height:1.76056338028169;"><span style="color:rgba(78,78,78,1);">
+
+<a href="\store\site\pages\login.jag" target="_self" class="" onclick="pageView.showSignIn(); return false;">
+<img src="\store\site\themes\wso2\images\money-transfer.png">
+</a></span>
+
+
+</p>
+<p style="height: 80px;"><span style="color:rgba(78,78,78,1);">Money Transfer API includes transfer money C2C, mwallet to CNIC and merchant payment </span></p>
+<p style="line-height:1.76056338028169;"><span><a href="\store\site\pages\login.jag" target="_self" class="btn btn-md btn-default" onclick="pageView.showSignIn(); return false;">Learn more &gt;</a></span></p></div>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="clearfix visible-sm-block visible-md-block visible-xs-block"></div>
+
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+
+
+
+<div class="ttr_Home_html_column12">
+<div class="html_content">
+<p><br style="font-family:'Roboto Slab','Arial';font-size:1.429em;color:rgba(231,76,60,1);"></p>
+<p><span style="font-family:'Roboto Slab','Arial';font-size:1.429em;color:rgba(231,76,60,1);"><a href="\store\site\pages\login.jag" target="_self" class="" onclick="pageView.showSignIn(); return false;">Authentication Oauth API</a></span></p>
+<p style="line-height:1.76056338028169;"><span style="color:rgba(78,78,78,1);"><a href="\store\site\pages\login.jag" target="_self" class="" onclick="pageView.showSignIn(); return false;"><img src="\store\site\themes\wso2\images\o-auth.png"></a></span>
+</p><p style="height: 80px;"><span style="color:rgba(78,78,78,1);">Oauth API is used to facilitate accessing other financial APIs. Please use this API to obtain an access token </span></p>
+<p></p>
+<p style="line-height:1.76056338028169;"><span><a href="\store\site\pages\login.jag" target="_self" class="btn btn-md btn-default" onclick="pageView.showSignIn(); return false;">Learn more &gt;</a></span></p></div>
+
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="clearfix visible-sm-block visible-xs-block"></div>
+
+
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<div class="ttr_Home_html_column10">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div class="html_content"><p><br style="font-family:'Roboto Slab','Arial';font-size:1.429em;color:rgba(231,76,60,1);"></p>
+<p><span style="font-family:'Roboto Slab','Arial';font-size:1.429em;color:rgba(231,76,60,1);"><a href="\store\site\pages\login.jag" target="_self" class=""  return false;">Utilities</a></span></p>
+<p style="line-height:1.76056338028169;"><span style="color:rgba(78,78,78,1);"><a href="\store\site\pages\login.jag" target="_self" class="" onclick="pageView.showSignIn(); return false;"><img src="\store\site\themes\wso2\images\utilities.png"></a></span></p>
+
+<p style="height: 80px;"><span style="color:rgba(78,78,78,1);">Utilities APIs are used to support credentials encryption and encoding for using JazzCash Mobile Money APIs.</span></p>
+<p style="line-height:1.76056338028169;"><span><a href="\store\site\pages\login.jag" target="_self" class="btn btn-md btn-default" onclick="pageView.showSignIn(); return false;">Learn more &gt;</a></span></p></div>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div style="clear:both;"></div>
+
+</div>
+</div>
+<div class="clearfix visible-xs-block"></div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+</div>
+
+</div>
+<% }); %>

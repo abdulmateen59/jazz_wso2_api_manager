@@ -1,0 +1,7 @@
+<%
+include("/jagg/jagg.jag");
+jagg.block("APIs/APIs-view", {
+initializer:function (data) {},
+getInputs:function () {}
+});
+%>

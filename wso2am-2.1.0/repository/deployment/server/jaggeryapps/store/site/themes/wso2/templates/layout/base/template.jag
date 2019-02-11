@@ -1,0 +1,49 @@
+<% jagg.template("layout/base", function(inputs, outputs, jagg) { %>
+
+	<%
+	var tenant=request_tenant;
+	%>
+
+<%jagg.includeBlock("menu/header", {"pagePath":outputs.pagePath,"tenant":tenant});%>
+
+<!-- #page-content-wrapper -->
+<div class="page-content-wrapper">
+    <!-- media-->
+    <div class="media">
+        <!-- media left-->
+         
+         <%
+                var section = null;
+                if(outputs.middle instanceof Array){ 
+                    section = outputs.middle[0].name;
+                }else{
+                    section = outputs.middle.name;
+                }
+            %>
+            
+        <!-- Sidebar -->
+           
+            
+        <% if(outputs.left) { %>            
+            <% //jagg.includeBlocks(outputs.left); %>
+            <% jagg.includeBlocks(outputs.right); %>
+        <% } %>                 
+        </div><!-- media left-->
+
+        <!-- Page Content -->       
+           
+        
+        <!-- media body-->
+        <div class="media-body">
+		
+        
+
+            <div class="container-fluid">      
+            	<div class="body-wrapper">
+                	<% jagg.includeBlocks(outputs.middle); %>
+                </div>            
+            </div> 
+        </div><!-- /#media body-->               
+    </div><!-- /#media-->
+</div><!-- /#page-content-wrapper -->
+<% }); %>
